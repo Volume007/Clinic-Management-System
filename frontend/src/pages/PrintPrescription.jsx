@@ -1,14 +1,12 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { Printer } from 'lucide-react';
-import { AuthContext } from '../context/AuthContext';
 
 const PrintPrescription = () => {
   const { id } = useParams();
   const [patient, setPatient] = useState(null);
   const [loading, setLoading] = useState(true);
-  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     // Hide body scrollbar/background for print view
@@ -88,34 +86,34 @@ const PrintPrescription = () => {
         }}>
         
         {/* Patient Name */}
-        <div style={{ position: 'absolute', top: '19.4%', left: '25%', fontSize: '15px', color: '#000', fontWeight: '700', width: '26%', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+        <div style={{ position: 'absolute', top: '20.5%', left: '25%', fontSize: '15px', color: '#000', fontWeight: '700', width: '26%', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
           {patient.full_name}
         </div>
 
         {/* Age */}
-        <div style={{ position: 'absolute', top: '19.4%', left: '62%', fontSize: '15px', color: '#000', fontWeight: '700', width: '7%' }}>
+        <div style={{ position: 'absolute', top: '20.5%', left: '62%', fontSize: '15px', color: '#000', fontWeight: '700', width: '7%' }}>
           {patient.age}
         </div>
 
         {/* Sex */}
-        <div style={{ position: 'absolute', top: '19.4%', left: '83.5%', fontSize: '15px', color: '#000', fontWeight: '700', width: '11%' }}>
+        <div style={{ position: 'absolute', top: '20.5%', left: '83.5%', fontSize: '15px', color: '#000', fontWeight: '700', width: '11%' }}>
           {patient.gender}
         </div>
 
         {/* Address */}
-        <div style={{ position: 'absolute', top: '22.8%', left: '19.5%', fontSize: '15px', color: '#000', fontWeight: '700', width: '48%', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+        <div style={{ position: 'absolute', top: '23.9%', left: '19.5%', fontSize: '15px', color: '#000', fontWeight: '700', width: '48%', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
           {patient.location || 'N/A'}
         </div>
 
         {/* Date */}
-        <div style={{ position: 'absolute', top: '22.8%', left: '80.5%', fontSize: '15px', color: '#000', fontWeight: '700', width: '14%' }}>
+        <div style={{ position: 'absolute', top: '23.9%', left: '80.5%', fontSize: '15px', color: '#000', fontWeight: '700', width: '14%' }}>
           {new Date(patient.visit_date).toLocaleDateString()}
         </div>
 
         {/* Body Content / Medicines & Advice */}
         <div style={{ 
           position: 'absolute', 
-          top: '30.0%', 
+          top: '30.5%', 
           left: '6%', 
           right: '6%', 
           bottom: '12%',
