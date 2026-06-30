@@ -190,7 +190,13 @@ npm run dev
 
 <img width="1902" height="850" alt="Screenshot 2026-06-30 162206" src="https://github.com/user-attachments/assets/c3bff179-8112-4f85-baab-e87fd6c35015" />
 
+---
 
+## Prescription 
+
+<img width="573" height="787" alt="Screenshot 2026-06-30 162228" src="https://github.com/user-attachments/assets/02323e5b-c592-4421-bac4-bb226bdae9f6" />
+
+---
 
 # 🔒 Security
 
