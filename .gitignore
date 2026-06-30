@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build
+dist/
+dist-electron/
+release/
+out/
+build/
+
+# SQLite Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup Databases
+Clinic_Backup_*.db
+Auto_Backup_Before_Restore_*.db
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Packaged application
+Clinic Software.exe
+node.exe
+
+# Launcher logs
+launcher_log.txt
+launcher_error.txt
+node_output.log
