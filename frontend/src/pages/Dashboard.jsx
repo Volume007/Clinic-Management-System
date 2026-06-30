@@ -53,7 +53,7 @@ const Dashboard = () => {
   };
 
   const formatDoctorName = (name) => {
-    if (!name) return 'Dr. Bimal Sharma';
+    if (!name || name === 'Welcome Doctor' || name.toLowerCase().includes('bimal')) return 'Doctor';
     // Remove existing "Dr." if present and remove "Kumar"
     let cleanName = name.replace(/^Dr\.?\s*/i, '').replace(/Kumar\s*/i, '');
     return `Dr. ${cleanName}`;

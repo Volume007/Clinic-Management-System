@@ -21,7 +21,7 @@ const loginDoctor = async (req, res) => {
       if (allDoctors[0].count === 0 && username === 'admin') {
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash('admin123', salt);
-        await db.query('INSERT INTO doctors (username, password, doctor_name) VALUES (?, ?, ?)', ['admin', hashedPassword, 'Dr. Bimal']);
+        await db.query('INSERT INTO doctors (username, password, doctor_name) VALUES (?, ?, ?)', ['admin', hashedPassword, 'Welcome Doctor']);
         
         // Fetch the newly created user
         const [newRows] = await db.query('SELECT * FROM doctors WHERE username = ?', ['admin']);

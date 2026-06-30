@@ -334,7 +334,7 @@ const exportHistoryPdf = async (req, res) => {
 
     // 1. Fetch doctor details
     const [doctors] = await db.query('SELECT doctor_name FROM doctors LIMIT 1');
-    const doctorName = doctors.length > 0 ? doctors[0].doctor_name : 'Dr. Bimal Sharma';
+    const doctorName = doctors.length > 0 ? doctors[0].doctor_name : 'Welcome Doctor';
 
     // 2. Fetch all visits chronologically
     const [visits] = await db.query(
